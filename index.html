@@ -9,28 +9,33 @@
   <body>
     <main>
       <form>
-        <div class="username_input">
-          <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Enter username" />
+        <div class="container">
+          <div class="username_input">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username" />
+          </div>
+          <div class="password">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" />
+            <span class="notify"
+              >Your password is between 4 and 12 characters</span
+            >
+          </div>
+          <div class="text_input">
+            <label for="Typing">Input Text Label</label>
+            <input type="text" id="typing" required />
+            <span class="error_msg"
+              >Error message informing me of a problem</span
+            >
+          </div>
         </div>
-        <div class="password">
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password" />
-          <span class="notify"
-            >Your password is between 4 and 12 characters</span
-          >
+        <div class="parent">
+          <input type="checkbox" id="remember" />
+          <label for="Remember me" class="remember">Remember me</label>
         </div>
-        <div class="text_input">
-          <label for="Typing">Input Text Label</label>
-          <input type="text" id="typing" required />
-          <span class="error_msg">Error message informing me of a problem</span>
-        </div>
-        <input type="checkbox" id="Remember me" />
-        <label for="Remember me">Remember me</label>
-
         <div class="on_pff">
           <input type="checkbox" id="turn" />
-          <label for="turn">Off</label>
+          <label for="turn" class="turn">Off</label>
         </div>
       </form>
     </main>

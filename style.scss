@@ -1,5 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+$purple_color: #7a5cfa;
+$grey_color: #cccccc;
+$red_color: #eb5757;
+$light_grey: #f4f4f4;
+$dark_grey: #666666;
+$light_purple: #e4defe;
+$white: #ffffff;
+
+@mixin small_label {
+  font-size: 12px;
+  color: $dark_grey;
+  font-weight: 600;
+}
+
+@mixin justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin small_msg {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+@mixin big_label {
+  font-size: 16px;
+  font-weight: 400;
+  color: $dark_grey;
+  margin-left: 16px;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+main {
+  background-color: $light_purple;
+  height: 100vh;
+  @include justify-center;
+
+  form {
+    width: 760px;
+    padding: 96px 98px 100px;
+    background-color: $white;
+    @media screen and (max-width: 1200px) {
+      width: 1000px;
+    }
+
+    div.container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 32px;
+      gap: 32px;
+      label {
+        @include small_label;
+      }
+      input {
+        height: 56px;
+        padding-left: 16px;
+        border-radius: 8px;
+        border: 1px solid $grey_color;
+
+        &:focus {
+          outline: 1px solid $purple_color;
+        }
+        &::placeholder {
+          font-size: 16px;
+          font-weight: 400;
+          color: $dark_grey;
+        }
+      }
+    }
+
+    .username_input,
+    .password,
+    .text_input {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    span.notify {
+      @include small_msg;
+      color: $dark_grey;
+    }
+    span.error_msg {
+      @include small_msg;
+      color: $red_color;
+    }
+  }
+
+  .remember {
+    @include big_label;
+  }
+  .turn {
+    @include big_label;
+  }
+
+  input#remember {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $grey_color;
+    border-radius: 8px;
+
+    &:checked {
+      background-color: $purple_color;
+    }
+  }
+  .parent {
+    display: flex;
+    align-items: center;
+  }
 }

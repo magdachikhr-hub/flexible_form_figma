@@ -1,5 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+main {
+  background-color: #e4defe;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+main form {
+  width: 760px;
+  padding: 96px 98px 100px;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 1200px) {
+  main form {
+    width: 1000px;
+  }
+}
+main form div.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  gap: 32px;
+}
+main form div.container label {
+  font-size: 12px;
+  color: #666666;
+  font-weight: 600;
+}
+main form div.container input {
+  height: 56px;
+  padding-left: 16px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+}
+main form div.container input:focus {
+  outline: 1px solid #7a5cfa;
+}
+main form div.container input::-moz-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+main form div.container input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+main form .username_input,
+main form .password,
+main form .text_input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+main form span.notify {
+  font-size: 12px;
+  font-weight: 400;
+  color: #666666;
+}
+main form span.error_msg {
+  font-size: 12px;
+  font-weight: 400;
+  color: #eb5757;
+}
+main .remember {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  margin-left: 16px;
+}
+main .turn {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  margin-left: 16px;
+}
+main input#remember {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+}
+main input#remember:checked {
+  background-color: #7a5cfa;
+}
+main .parent {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
