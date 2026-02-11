@@ -117,3 +117,49 @@ main {
     align-items: center;
   }
 }
+
+div.on_off {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  #turn {
+    appearance: none;
+    width: 49px;
+    height: 24px;
+    border: 1px solid $grey_color;
+    border-radius: 32px;
+    position: relative;
+
+    &:checked {
+      background-color: $purple_color;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border: 1px solid $grey_color;
+      border-radius: 50%;
+      top: 1px;
+      background-color: $light_grey;
+    }
+    &::after {
+      right: 1px;
+      // background-color: $light_grey;
+    }
+    &::before {
+      left: 1px;
+      // background-color: green;
+      display: none;
+    }
+
+    &:checked::before {
+      display: block;
+    }
+    &:checked::after {
+      display: none;
+    }
+  }
+}
