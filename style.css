@@ -96,4 +96,86 @@ main input#remember:checked {
 main .parent {
   display: flex;
   align-items: center;
+}
+
+div.on_off {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+}
+div.on_off #turn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 49px;
+  height: 24px;
+  border: 1px solid #cccccc;
+  border-radius: 32px;
+  position: relative;
+  transition: all 100ms linear;
+  cursor: pointer;
+}
+div.on_off #turn:checked {
+  background-color: #7a5cfa;
+}
+div.on_off #turn::before, div.on_off #turn::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  top: 1px;
+  background-color: #f4f4f4;
+  transition: all 100ms linear;
+}
+div.on_off #turn::after {
+  right: 1px;
+}
+div.on_off #turn::before {
+  left: 1px;
+  opacity: 0;
+}
+div.on_off #turn:checked::before {
+  opacity: 1;
+}
+div.on_off #turn:checked::after {
+  opacity: 0;
+}
+
+.radio {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  margin-top: 32px;
+}
+.radio label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  margin-left: 16px;
+}
+.radio input {
+  width: 24px;
+  height: 24px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+select {
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 32px;
+  border: 1px solid #cccccc;
+  color: #666666;
+  outline: none;
+}
+select:focus {
+  border-color: #7a5cfa;
 }/*# sourceMappingURL=style.css.map */
